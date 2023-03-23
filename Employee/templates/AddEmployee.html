@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+{% load static %}
+
+<!-- saved from url=(0037)http://14.142.34.210:8080/addemployee -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" xmlns:th="http://www.thymeleaf.org">
+      
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Intranet</title>
+       <!-- Favicon icon -->
+      <link rel="icon" type="../image/png" sizes="16x16" href="http://14.142.34.210:8080/images/favicon.png">
+           <!-- Custom Stylesheet -->
+      <link href="{% static 'css/style.css' %}" rel="stylesheet">
+      <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+      <script type="text/javascript" src="{% static 'plugins/jquery.min.js.download' %}"></script>
+   </head>
+   <body data-theme-version="light" data-layout="vertical" data-nav-headerbg="color_1" data-headerbg="color_1" data-sidebar-style="full" data-sibebarbg="color_1" data-sidebar-position="static" data-header-position="static" data-container="wide" direction="ltr" data-gr-c-s-loaded="true">
+      <!--*******************
+         Preloader start
+         ********************-->
+      <div id="preloader" style="display: none;">
+         <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+               <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"></circle>
+            </svg>
+         </div>
+      </div>
+      <!--*******************
+         Preloader end
+         ********************-->
+      <!--**********************************
+         Main wrapper start
+         ***********************************-->
+      <div id="main-wrapper" class="show">
+         <!--**********************************
+            Nav header start
+            ***********************************-->
+         <div class="nav-header">
+            <div class="brand-logo">
+               <a href="http://14.142.34.210:8080/index.html">
+               <b class="logo-abbr"><img src="{% static 'images/logo.png' %}" alt=""> </b>
+               <span class="logo-compact"><img src="{% static 'images/logo-compact.png' %}" alt=""></span>
+               <span class="brand-title">
+               <img src="{% static 'images/logo-text.png' %}" alt="" style="width: 100%;margin-top: -17px;">
+               </span>
+               </a>
+            </div>
+         </div>
+         <!--**********************************
+            Nav header end
+            ***********************************-->
+         <!--**********************************
+            Header start
+            ***********************************-->
+      		<header>        <div class="header">
+            <div class="header-content clearfix">
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="toggle-icon"><i class="icon-menu"></i></span>
+                    </div>
+                </div>
+                <div class="header-left">
+                    
+                </div>
+                <div class="header-right">
+                    <ul class="clearfix">
+                        <li class="icons dropdown">
+                            <b><span></span></b>&nbsp;
+                        </li>
+                        <li class="icons dropdown">
+                            <a href="http://14.142.34.210:8080/employeesextension">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="icons dropdown">
+                            <div class="user-img c-pointer position-relative" data-toggle="dropdown" aria-expanded="false">
+                                <span class="activity active"></span>
+                                <i class="fa fa-user-circle users-img" aria-hidden="true"></i>
+                            </div>
+                            <div class="drop-down dropdown-profile dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-132px, 57px, 0px);">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="http://14.142.34.210:8080/requestchangepassword"><i class="icon-lock"></i> <span>Reset Password</span></a>
+                                        </li>
+                                        <li><a href="/employeeLogin"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+</header>
+         <!--**********************************
+            Header end ti-comment-alt
+            ***********************************-->
+         <!--**********************************
+            Sidebar start
+            ***********************************-->
+            <header>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+   <!--**********************************
+            Sidebar start
+            ***********************************-->
+         <div class="nk-sidebar">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;"><div class="nk-nav-scroll active" style="overflow: hidden; width: auto; height: 100%;">
+               <ul class="metismenu in" id="menu">
+                  <li>
+                     <a href="http://14.142.34.210:8080/home" aria-expanded="false">
+                     <i class="icon-speedometer menu-icon"></i><span class="nav-text">Home</span>
+                     </a>
+                  </li>
+                  <!--<li>
+                     <a  href="table-datatable.html" aria-expanded="false">
+                     <i class="icon-speedometer menu-icon"></i><span class="nav-text">listening Page </span>
+                     </a>
+                  </li>
+                  <li>
+                     <a  href="form-validation.html" aria-expanded="false">
+                     <i class="icon-speedometer menu-icon"></i><span class="nav-text">Add New  </span>
+                     </a>
+                  </li>-->
+                  <li class="mega-menu mega-menu-sm active">
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-globe-alt menu-icon"></i><span class="nav-text">HR</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse in">
+                        <li class="active"><a href="http://14.142.34.210:8080/addemployee" class="active">Add Employee Details</a></li>
+                        <li><a href="http://14.142.34.210:8080/listemployee">Employee List</a></li>
+                        <li><a href="http://14.142.34.210:8080/listdepartment">Department Master</a></li>
+                        <li><a href="http://14.142.34.210:8080/listdesignation">Designation Master</a></li>
+                        <li><a href="http://14.142.34.210:8080/listqualification">Qualification Master</a></li>
+                        <li><a href="http://14.142.34.210:8080/updateLeavesRequest">Leave Master</a></li>
+                        <li><a href="http://14.142.34.210:8080/leaveContributionRequest">Leave Contribution</a></li>
+                        <li><a href="http://14.142.34.210:8080/attendanceShortageReportDates">Attendance Shortage Report</a></li>
+                        <li><a href="http://14.142.34.210:8080/getDetailLeaveReportDates">Detail Leave Report</a></li>
+                        <li><a href="http://14.142.34.210:8080/getHolidays">Update Holidays</a></li>
+                        <li><a href="http://14.142.34.210:8080/editNews">Add NEWS</a></li>
+                        <li><a href="http://14.142.34.210:8080/getAttendance">Update Employee Attendance</a></li>
+                        <li><a href="http://14.142.34.210:8080/listEmployeesForReport">Flexible Report</a></li>
+                        <li><a href="http://14.142.34.210:8080/employeesAdditionDeletionDates">Addition Deletion Report</a></li>
+                        <li><a href="http://14.142.34.210:8080/leaveTrackReportDates">Leave Track Report</a></li>
+                        <li><a href="http://14.142.34.210:8080/uploadDocument">Upload Documents</a></li>
+                        <li><a href="http://14.142.34.210:8080/getEmployeesForEmployeeOfTheMonth">Choose Employee of Month</a></li>
+                        <li><a href="http://14.142.34.210:8080/manHourReportDates">ManHour Report</a></li>
+                        <!-- <li><a href="#">Leave Master</a></li>
+                        <li><a href="../hr/compensatory-off.html">Compensatory Off</a></li>
+                        <li><a href="../hr/reset-password.html">Reset Password</a></li>
+                        <li><a href="../hr/traniee-to-permanent.html">Traniee To Permanent</a></li> -->
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-envelope menu-icon"></i> <span class="nav-text">My Account</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+                        <li><a href="http://14.142.34.210:8080/filltimesheet">Fill Time Sheet</a></li>
+                        <li><a href="http://14.142.34.210:8080/viewtimesheet">View Time Sheet</a></li>       
+                        <li>
+                       		<a href="http://14.142.34.210:8080/employeeManHourReportDates">Man-Hour Report</a>
+                       	</li>
+                        <li>
+                       		<a href="http://14.142.34.210:8080/getEmployeeAttendanceReportDates">My Timesheet and Attendance</a>
+                       	</li>
+                        <li>
+                       		<a href="http://14.142.34.210:8080/getEmployeeAttendanceReport">My Attendance</a>
+                       	</li>
+                       	<li><a href="http://14.142.34.210:8080/leaveContribution">Leave Contribution</a></li>                 
+                       	<li><a href="http://14.142.34.210:8080/leaveEncashmentRequest">Leave Encashment Request</a></li>                 
+                       	<li><a href="http://14.142.34.210:8080/viewLeaveEncashmentRequest">Leave Encashment Status</a></li>                 
+                       	<li>
+                       		<a href="http://14.142.34.210:8080/requesttimesheetlistforapproval">Approve Time Sheet</a>
+                       	</li>
+                       	<li>
+                       		<a href="http://14.142.34.210:8080/getemployeelistforassigninglead">Assign Reviewer</a>
+                       	</li>
+                        <li>
+                       		<a href="http://14.142.34.210:8080/requestTimeSheetFinalReport">SnB Timesheet Report</a>
+                       	</li>
+                        <li>
+                       		<a href="http://14.142.34.210:8080/requestTimeSheetStatusReport">Timesheet Status Report</a>
+                       	</li>
+                       	<li>
+                       		<a href="http://14.142.34.210:8080/getCumulativeLeaveReport">Cumulative Leave Report</a>
+                       	</li>
+                       	<li>
+                       		<a href="http://14.142.34.210:8080/leaveEncashmentRequestListDatesForHr">Leave Encashment Request List</a>
+                       	</li>
+                        
+                        <!-- <li><a href="#">Attendence</a></li> -->
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">HR FORM &amp; Documents</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+                        <li><a href="http://14.142.34.210:8080/uploaded/documents/mediclaimReimbursementClaimForm.pdf">Mediclaim Form</a></li>
+                        <li><a href="http://14.142.34.210:8080/uploaded/documents/standardTerms.pdf">Standard Mediclaim Terms</a></li>
+                        <li><a href="http://14.142.34.210:8080/uploaded/documents/additionalTerms.pdf">Additional Mediclaim Terms</a></li>
+                        <li><a href="http://14.142.34.210:8080/uploaded/documents/holidayListBangalore.pdf">Holiday List Bengaluru</a></li>
+                        <li><a href="http://14.142.34.210:8080/uploaded/documents/holidayListNoida.pdf">Holiday List Noida</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-graph menu-icon"></i> <span class="nav-text">Leave</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+                        <li><a href="http://14.142.34.210:8080/leaveRequest">Leave Application</a></li>
+                        <li><a href="http://14.142.34.210:8080/leaveStatus">Leave Request</a></li>
+                        <li><a href="http://14.142.34.210:8080/leaveListForApproval">Leave Approval</a></li>
+                        
+                        <!-- <li><a href="#">Leave Request Status</a></li>
+                        <li><a href="#">Leave Encashment Form</a></li>
+                        <li><a href="#">Leave Encashment Status/Approval</a></li>
+                        <li><a href="#">Leave Encashment Report</a></li>
+                        <li><a href="#">Leave Contribution</a></li>
+                        <li><a href="#">Leave Contribution Admin</a></li>
+                        <li><a href="#">Leave Contribution Report</a></li>
+                        <li><a href="#">Holiday List</a></li> -->
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-grid menu-icon"></i><span class="nav-text">Travel</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+                        <!-- <li><a href="#">Domestic Travel Request Form</a></li>
+                        <li><a href="#">Foreign Travel Request Form</a></li>
+                        <li><a href="#">Travel Request Status</a></li> -->
+                        <!-- </ul>
+                           </li>
+                           <li>
+                               <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                                   <i class="icon-layers menu-icon"></i><span class="nav-text">Components</span>
+                               </a>
+                               <ul aria-expanded="false"> -->
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-note menu-icon"></i><span class="nav-text">HelpDesk</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+                        
+                        <!-- <li><a href="#">Conference Room Booking Form</a></li>
+                        <li><a href="#">Admin Purchase Request Form</a></li>
+                        <li><a href="#">Admin Purchase Status/Approval</a></li>
+                        <li><a href="#">Login/Email/HW/SW Requests Status</a></li>
+                        <li><a href="#">Media Request And Data Copy Form</a></li>
+                        <li><a href="#">Virus Check And Data Transfer Form</a></li>
+                        <li><a href="#">Media And Data Transfer Status</a></li>
+                        <li><a href="#">Media And Data Transfer Status</a></li> -->
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-menu menu-icon"></i><span class="nav-text">Mediclaim</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+                        <li><a href="http://14.142.34.210:8080/startMediclaim">Start Mediclaim Process</a></li>
+                        <li><a href="http://14.142.34.210:8080/getEmployeeListForMediclaim">Mediclaim List</a></li>                           
+                        <li><a href="http://14.142.34.210:8080/getEmployeeMediclaimListForHR">Edit Employee Nomination</a></li>
+                        
+                        <li><a href="http://14.142.34.210:8080/getEmployeeMediclaimForView">View Mediclaim</a></li>
+                        <li><a href="http://14.142.34.210:8080/getEmployeeMediclaim">Nomination</a></li>
+                        <li><a href="http://14.142.34.210:8080/getEmployeeMediclaimForDeclaration">Declaration</a></li> 
+                        <li><a href="http://14.142.34.210:8080/addemployee#">Quality Document</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-menu menu-icon"></i><span class="nav-text">Quality</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+<!--                         <li><a href="#">Quality Policy</a></li>
+                        <li><a href="#">HSE Policy</a></li>
+                        <li><a href="#">Quality Document</a></li> -->
+                     </ul>
+                  </li>
+                  <!-- <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-notebook menu-icon"></i><span class="nav-text">Lesson</span>
+                     </a>
+                     <ul aria-expanded="false">
+                        <li><a href="#">Lesson Learnt Entry</a></li>
+                        <li><a href="#">Lesson Learnt Status</a></li>
+                        <li><a href="#">Lesson Learnt Report</a></li>
+                     </ul>
+                  </li> -->
+                  <!-- <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-notebook menu-icon"></i><span class="nav-text">Reprography</span>
+                     </a>
+                     <ul aria-expanded="false">
+                        <li><a href="#">Reprography Request</a></li>
+                        <li><a href="#">Reprography Status</a></li>
+                     </ul>
+                  </li> -->                  
+                  
+                  <li>
+                     <a class="has-arrow" href="javascript:appraisal()" aria-expanded="false">
+                     <i class="icon-note menu-icon"></i><span class="nav-text">Appraisal</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+                     	<li><a href="http://14.142.34.210:8080/startAppraisal">Start Appraisal</a></li>
+                     	<li><a href="http://14.142.34.210:8080/getApprisalListForHr">Report</a></li>
+                     	<li><a href="http://14.142.34.210:8080/getemployeelistforAssigningAppraiser">Assign Appraiser</a></li>
+                     	<li><a href="http://14.142.34.210:8080/getEmployeeAppraisal">Employee Appraisal</a></li>
+                     	<li><a href="http://14.142.34.210:8080/getEmployeelistforAppraiser">Appraiser Appraisal</a></li>
+                     	<li><a href="http://14.142.34.210:8080/getEmployeeListForHod">HOD Appraisal</a></li>
+                     	
+                        <!-- <li><a href="#">IT Support Request Form</a></li>
+                        <li th:if="${session.user.userRole} == 'Admin'"><a href="../getLeaveRequestList">Leave Revert</a></li>
+                        <li><a href="#">IT Support Request Status</a></li>
+                        <li><a href="#">Conference Room Booking Form</a></li>
+                        <li><a href="#">Admin Purchase Request Form</a></li>
+                        <li><a href="#">Admin Purchase Status/Approval</a></li>
+                        <li><a href="#">Login/Email/HW/SW Requests Status</a></li>
+                        <li><a href="#">Media Request And Data Copy Form</a></li>
+                        <li><a href="#">Virus Check And Data Transfer Form</a></li>
+                        <li><a href="#">Media And Data Transfer Status</a></li>
+                        <li><a href="#">Media And Data Transfer Status</a></li> -->
+                     </ul>
+                  </li>
+               </ul>
+            </div><div class="slimScrollBar" style="background: transparent; width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 1213.32px;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+         </div>
+        <!--**********************************
+            Sidebar end
+            ***********************************-->
+</header>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body" style="min-height: 788px;">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Add Employee</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2>Add Employee Details</h2>
+                                <div class="form-validation">
+                                    <form class="form-valide" action="{% url 'employee' %}"  method="post" novalidate="novalidate">
+                                        {% csrf_token %}
+
+                                    <div class="lk" style="margin-bottom: 20px;">
+
+                                        <div class="form-group row">
+                                            <label class="col-lg-2 col-form-label" for="accountType">  Account Type <span class="text-danger">*</span>
+                                            </label>
+                                                      <div class="col-lg-4">
+                                                <select required="" class="form-control" id="accountType" name="accountType"  aria-required="true">
+                                                    <option value="">Please select</option>
+                                                    <option value="New Joinee">New Joinee</option>
+                                                    <option value="Conversion Case">Conversion Case</option>
+                                                </select>
+                                            </div>
+                                            <label class="col-lg-2 col-form-label" for="val-email">  Employee Type  <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-4">
+                                               <select class="form-control" required="" id="employeeType" name="employeeType"  aria-required="true">
+                                                    <option value="">Please select</option>
+                                                    <option value="A">Agency (SL-0) (PL-0)</option>
+												    <option value="L">Consultant (SL-0) (PL-24/25)</option>
+												    <option value="C">Contract I (SL-0) (PL-18)</option>
+												    <option value="C2">Contract II (SL-12) (PL-0)</option>
+												    <option value="C3">Contract III (SL-0) (PL-18) (WD-6)</option>
+												    <option value="P">Permanent (SL-12) (PL-25)</option>
+												    <option value="T">Trainee (SL-12) (PL-12)</option>												    
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                        <label class="col-lg-2 col-form-label" style="white-space: normal;">Peolple Soft<br> Number      <span class="text-danger">*</span>
+                                            </label>
+                                                      <div class="col-lg-4">
+                                                  <input type="text" class="form-control" required="" id="softNumber" name="softNumber"  value="" aria-required="true">
+
+                                            </div>
+                                                   <label class="col-lg-2 col-form-label" for="val-range">  Payroll Number  <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-4">
+                                                <input type="text" class="form-control" required="" id="payrollNumber" name="payrollNumber"  value="" aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-2 col-form-label" for="val-email">  Employee Name  <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-4">
+                                                <input type="text" class="form-control" required="" id="employeeName" name="employeeName"  value="" aria-required="true">
+                                            </div>
+                                                     <label class="col-lg-2 col-form-label" for="val-range">  Gender  <span class="text-danger">*</span>
+                                            </label>
+                                                    <div class="col-lg-4">
+                                                <select class="form-control" required="" id="gender" name="gender" aria-required="true">
+                                                    <option value="">Please select</option>
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+      
+                                            <label class="col-lg-2 col-form-label" for="val-confirm-password">  Join Date   <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-4">
+                                                <input type="date" class="form-control" required="" id="joiningDate" name="joiningDate" required>
+                                            </div>
+                                                 <label class="col-lg-2 col-form-label" for="val-range">    Email ID
+                                            </label>
+                                            <div class="col-lg-4">
+                                                <input type="email" class="form-control" id="emailId" name="emailId" value="">
+                                            </div>
+                                   
+                                        </div>
+                                      <div class="form-group row">
+
+                                           <label class="col-lg-2 col-form-label" for="val-password">  Date Of Birth   <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-4">
+                                                <input type="date" class="form-control" required="" id="dob" name="dob"  value="" aria-required="true">
+                                            </div>
+                                                  <label class="col-lg-2 col-form-label" for="val-range">  Renewal Confirmation <span class="text-danger">*</span>
+                                            </label>
+                                               <div class="col-lg-4">
+                                                <select class="form-control" required="" id="renewalType" name="renewalType" aria-required="true">
+                                                    <option value="">Select</option>
+												    <option value="Not Applicable">Not Applicable</option>
+												    <option value="Completion of Training">Completion of Training</option>
+												    <option value="Due for Confirmation">Due for Confirmation</option>
+												    <option value="Quarterly Appraisal">Quarterly Appraisal</option>
+												    <option value="Renewal of Contract">Renewal of Contract</option>
+                                       
+                                                </select>
+                                            </div>
+                                        </div>
+                                           <div class="form-group row">
+                                                <label class="col-lg-2 col-form-label" for="val-range">  Designation <span class="text-danger">*</span>
+                                            </label>
+                                               <div class="col-lg-4">
+                                                <select class="form-control" required="" id="designation.designationId" name="designation"  aria-required="true">
+                                                    <option value="">--Select Designation--</option>
+                                                    <option value="AAAA">AAAA</option>
+                                                    <option value="BBBB">BBBB</option>
+
+                                                    </select>
+                                            </div>
+                                                  <label class="col-lg-2 col-form-label" for="val-range">    Notice Period (Months)  <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-4">
+                                                <input type="text" class="form-control" required="" id="noticePeriodTime" name="noticePeriodTime" value="" aria-required="true">
+                                            </div>
+                                        </div>
+                                                <div class="form-group row">
+                                                                 <label class="col-lg-2 col-form-label" for="val-suggestions">  Prev. non-SBEC Exp  <span class="text-danger">*</span>
+                                            </label>
+                                                <div class="col-lg-4">
+                                            <input type="text" class="form-control" required="" id="nonSbecExpTime" name="nonSbecExpTime" value="" aria-required="true">
+                                            </div>
+                                                  <label class="col-lg-2 col-form-label" for="val-range">  Prev. SBEC Exp yrs <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-4">
+                                                <input type="text" class="form-control" required="" id="presbecExpTime" name="presbecExpTime" value="" aria-required="true">
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <div class="lk">
+                                        <div class="form-group row">
+                                            <label class="col-lg-2 col-form-label" for="val-skill"> Approver <span class="text-danger">*</span>
+                                            </label>
+                                      <div class="col-lg-4">
+                                                <select class="form-control approver" required="" id="approver.employeeId" name="approver" aria-required="true">
+                                                    <option value="">--Select Reporting To--</option>    
+                                                    <option value="1">Vaishali Singh</option>    
+                                                    <option value="61">Girija Prasad Nanda</option>    
+                                                    <option value="63">Subir Kumar</option>    
+                                                    <option value="64">M. Venkatesan</option>    
+                                                    <option value="65">Ananthanarayanan Parameswaran</option>    
+                                                    <option value="69">Samir Kumar</option>    
+                                                    <option value="72">Alpana Kumar</option>    
+                                                    <option value="73">Vinay Aggarwal</option>    
+                                                    <option value="74">Anil Kumar Sharma</option>    
+                                                    <option value="75">Jagdish Chandar</option>    
+                                                    <option value="76">Saima Kausar</option>    
+                                                    <option value="77">Gourav Dhiman</option>    
+                                                    <option value="78">Saddam Husain</option>    
+                                                    <option value="79">Vishnu Prasad Mourya</option>    
+                                                    <option value="80">Ashish Kumar</option>    
+                                                    <option value="82">Narendra Vikram</option>    
+                                                    <option value="83">Veeranna Nagannavar</option>    
+                                                    <option value="84">Lokender Kumar Raghav</option>    
+                                                    <option value="85">Vikas Negi</option>    
+                                                    <option value="86">Mohd Ayaz</option>    
+                                                    <option value="87">Vishal Arora</option>    
+                                                    <option value="89">Jitender Kumar</option>    
+                                                    <option value="90">Deepak Bisht</option>    
+                                                    <option value="91">Vishal Kumar Raj</option>    
+                                                    <option value="92">Satbir Singh</option>    
+                                                    <option value="93">Kanishka Tomar</option>    
+                                                    <option value="94">Aishwarya Kumar Singh</option>    
+                                                    <option value="95">Malkhan Singh</option>    
+                                                    <option value="96">Amardeep Singh Jaswal</option>    
+                                                    <option value="100">Naveen Khattar</option>    
+                                                    <option value="102">Udit Agarwal</option>    
+                                                    <option value="104">Deepak Prasad</option>    
+                                                    <option value="105">Manoj Kumar Jain</option>    
+                                                    <option value="106">Manish Negi</option>    
+                                                    <option value="107">Savitha K M</option>    
+                                                    <option value="108">Lohith Ramesh</option>    
+                                                    <option value="109">Ashok Kumar Jayswal</option>    
+                                                    <option value="110">Tarun Khandelwal</option>    
+                                                    <option value="111">Tessy Prasad</option>    
+                                                    <option value="112">Priti Tripathi</option>    
+                                                    <option value="113">Yogesh Garg</option>    
+                                                    <option value="115">Subrata Kumar Panda</option>    
+                                                    <option value="116">Narender P Bhatt</option>    
+                                                    <option value="117">Lekha Sunil</option>    
+                                                    <option value="118">Akshat Chauhan</option>    
+                                                    <option value="119">Deepak Sharma</option>    
+                                                    <option value="120">Navjot Singh</option>    
+                                                    <option value="122">Atanu Chatterjee</option>    
+                                                    <option value="123">Narendra Rawat</option>    
+                                                    <option value="124">Ajay Singh</option>    
+                                                    <option value="125">Ramish Khan</option>    
+                                                    <option value="126">Abhay Kumar Chauhan </option>    
+                                                    <option value="127">Bijoyesh Kumar Choudhary</option>    
+                                                    <option value="128">Sapna</option>    
+                                                    <option value="129">Shivam Mankotia</option>    
+                                                    <option value="130">Aman Bhatt</option>    
+                                                    <option value="131">Alam Imran Mohd Ashraful</option>    
+                                                    <option value="132">Raju Das</option>    
+                                                    <option value="137">Vinod Kumar</option>    
+                                                    <option value="138">Sanjay Kumar Thakur</option>    
+                                                    <option value="139">Pragya Rashmi</option>    
+                                                    <option value="140">Amir Khan</option>    
+                                                    <option value="141">Rahul Gupta</option>    
+                                                    <option value="142">Vivek Mani</option>    
+                                                    <option value="143">Amit Govind</option>    
+                                                    <option value="144">Vikas Gupta</option>    
+                                                    <option value="145">Sachin Kumar</option>    
+                                                    <option value="146">Prashant Kaushik</option>    
+                                                    <option value="147">Nikhil Saini</option>    
+                                                    <option value="148">Amit Ghosh</option>    
+                                                    <option value="150">Sabare Alam</option>    
+                                                    <option value="152">Rohit Kumar Sharma</option>    
+                                                    <option value="153">Tul B Shahee</option>    
+                                                    <option value="154">Yogender Rawat</option>    
+                                                    <option value="155">Rahul Malik</option>    
+                                                    <option value="156">Lovepreet Singh</option>    
+                                                    <option value="159">Aviranjan Kumar</option>    
+                                                    <option value="161">Vipul Sarkar</option>    
+                                                    <option value="163">Reena Morvi</option>    
+                                                    <option value="164">Kapil  Kaushik</option>    
+                                                    <option value="165">Haripal Singh Kaushik </option>    
+                                                    <option value="166">Bibekananda Nayak</option>    
+                                                    <option value="168">Rakesh Kumar Choudhary</option>    
+                                                    <option value="169">Deepak Chopra</option>    
+                                                    <option value="170">Akanksha Rastogi </option>    
+                                                    <option value="171">Rahul Chaudhary</option>    
+                                                    <option value="172">Vikas Khandelwal</option>    
+                                                    <option value="173">Satish Kumar</option>    
+                                                    <option value="174">Pankaj Singh Gusain </option>    
+                                                    <option value="175">Imran Ahmed </option>    
+                                                    <option value="176">Saroj Kumar Pradhan</option>    
+                                                    <option value="177">Sonu Rai</option>    
+                                                    <option value="178">Dixit Sethi </option>    
+                                                    <option value="179">Saurabh Hasija</option>    
+                                                    <option value="180">Amanpreet Singh Syall</option>    
+                                                    <option value="181">Archit Jain </option>    
+                                                    <option value="182">Amit Kumar </option>    
+                                                    <option value="183">Chandra Pal Singh Tomar</option>    
+                                                    <option value="184">Shafquat Imam </option>    
+                                                    <option value="185">Jaswant Singh</option>    
+                                                    <option value="186">Md. Shabbir Quamar</option>    
+                                                    <option value="188">Surender Kumar Gupta</option>    
+                                                    <option value="189">Rajiv Kumar Bishwas</option>    
+                                                    <option value="191">Taurus Tyagi</option>    
+                                                    <option value="192">Gajendra Bisht </option>    
+                                                    <option value="193">Mukesh Kumar</option>    
+                                                    <option value="194">Chegondi Satish Kumar</option>    
+                                                    <option value="195">Nibedita Gadapal</option>    
+                                                    <option value="196">Ankit Kumar </option>    
+                                                    <option value="197">Pardeep Kumar</option>    
+                                                    <option value="198">Santosh Kumar Singh </option>    
+                                                    <option value="199">Sunil Kumar</option>    
+                                                    <option value="200">Sachin Kumar Jain</option>    
+                                                    <option value="201">Deepanjan Ghosh</option>    
+                                                    <option value="202">Shally Garg</option>    
+                                                    <option value="204">Ganithi Manoj Kumar</option>    
+                                                    <option value="205">Varun Mehra </option>    
+                                                    <option value="206">Shruti Sharma</option>    
+                                                    <option value="207">Ripun Chandra Das</option>    
+                                                    <option value="208">Hari Mohan Rastogi</option>    
+                                                    <option value="209">Rakesh Panicker</option>    
+                                                    <option value="210">M. Karthikeyan </option>    
+                                                    <option value="211">Siddharth Ghosh</option>    
+                                                    <option value="212">Hari Singh</option>    
+                                                    <option value="213">Puneet Garg</option>    
+                                                    <option value="214">Amit Singh </option>    
+                                                    <option value="215">Rakesh Verma</option>    
+                                                    <option value="216">Dinesh Kumar Agrawal</option>    
+                                                    <option value="217">Prem Prakash Singh</option>    
+                                                    <option value="218">Nagendra Singh Negi</option>    
+                                                    <option value="219">Sumit Kumar </option>    
+                                                    <option value="220">Rajendra Singh</option>    
+                                                    <option value="221">Chinmaya Mishra</option>    
+                                                    <option value="223">Kamlesh Ramkripal Singh </option>    
+                                                    <option value="224">Prateek Garg</option>    
+                                                    <option value="225">Vipin Kumar </option>    
+                                                    <option value="226">Raguram Ramachandran</option>    
+                                                    <option value="227">Nikita </option>    
+                                                    <option value="228">Narasimhamurthy N</option>    
+                                                    <option value="229">Abhishek Mitra</option>    
+                                                    <option value="231">Sameer R Yadav </option>    
+                                                    <option value="232">Sk Md Forid</option>    
+                                                    <option value="236">Rishabh Pandey </option>    
+                                                    <option value="238">Ritesh Kumar</option>    
+                                                    <option value="239">Dipu Kumar</option>    
+                                                    <option value="241">Vipin Kumar </option>    
+                                                    <option value="242">Kedar Nath</option>    
+                                                    <option value="243">Umesh Kumar</option>    
+                                                    <option value="244">Pranav Kumar Jha</option>    
+                                                    <option value="245">Raghuveer Singh</option>    
+                                                    <option value="246">Pradeep Kumar</option>    
+                                                    <option value="247">Santosh Singh Gosain</option>    
+                                                    <option value="248">Ragunath P</option>    
+                                                    <option value="249">Brahmeswar Dash</option>    
+                                                    <option value="250">Balaji Radhakrishnan</option>    
+                                                    <option value="251">Sumit Kumar</option>    
+                                                    <option value="252">Sateesh Pindi</option>    
+                                                    <option value="253">Goutam Mondal</option>    
+                                                    <option value="254">Dharmesh Singh</option>    
+                                                    <option value="255">Dileep Kumar Singh</option>    
+                                                    <option value="256">Venkata Kiran Kumar Manepalli</option>    
+                                                    <option value="257">Gaurav Bhatnagar</option>    
+                                                    <option value="258">Neeraj Malik</option>    
+                                                    <option value="259">Arun Gautam</option>    
+                                                    <option value="260">Suresh Chandra</option>    
+                                                    <option value="261">Raghvendra</option>    
+                                                    <option value="262">Ashwani Singh</option>    
+                                                    <option value="263">Narayan Rao G N</option>    
+                                                    <option value="264">Chandrashekar Lakshminarayanappa</option>    
+                                                    <option value="265">Arun Paras Kerketta</option>    
+                                                    <option value="266">Prem Chandra Sharma</option>    
+                                                    <option value="267">Ananth Padmanabha Kodancha</option>    
+                                                    <option value="268">Bimlendra Kumar</option>    
+                                                    <option value="269">Mohit Kumar Vashisth</option>    
+                                                    <option value="270">Patole Sharad Bhanudas</option>    
+                                                    <option value="271">Nitin Kushwaha</option>    
+                                                    <option value="272">Anurag Sharma</option>    
+                                                    <option value="273">Amit Kumar</option>    
+                                                    <option value="274">Devesh Kumar</option>    
+                                                    <option value="275">Venkatesh Pumandla</option>    
+                                                    <option value="279">Santosh Vikram Kadam</option>    
+                                                    <option value="280">Vrind Kumar Yadav</option>    
+                                                    <option value="281">Pritika Vajpayee</option>    
+                                                    <option value="283">Ashish Kumar Kaushik</option>    
+                                                    <option value="284">Dharmender</option>    
+                                                    <option value="285">Yugandar Krishna Mohan Bagadi</option>    
+                                                    <option value="286">Shishir Chhetri</option>    
+                                                    <option value="288">Rakesh Singh Chandel</option>    
+                                                    <option value="289">Priyanka Dev</option>    
+                                                    <option value="292">Mahesh Babu Chennagowni</option>    
+                                                    <option value="295">Aman Tripathi </option>    
+                                                    <option value="296">Mohit Agarwal</option>    
+                                                    <option value="297">Sakshi Pal </option>    
+                                                    <option value="298">Garima Sharma</option>    
+                                                    <option value="300">Lal Mohan Jana</option>    
+                                                    <option value="302">Diksha Garg </option>    
+                                                    <option value="305">Neelavannan</option>    
+                                                    <option value="309">Chandrika N M</option>    
+                                                    <option value="311">Neha Dev </option>    
+                                                    <option value="312">Ravindra Pratap Shahi</option>    
+                                                    <option value="313">Subramanya C.R.</option>    
+                                                    <option value="315">Rupesh Kumar </option>    
+                                                    <option value="316">Sonam Gupta</option>    
+                                                    <option value="17016">Ravi Bhashkar Kumar</option>    
+                                                    <option value="318">Vivek Kumar Pandey </option>    
+                                                    <option value="324">Rooma </option>    
+                                                    <option value="326">Naman Govind Varshney </option>    
+                                                    <option value="327">Ashish Gupta</option>    
+                                                    <option value="328">Amit Khanderao Kare</option>    
+                                                    <option value="330">Raj Kumar</option>    
+                                                    <option value="333">Preetish Daniel Pitta</option>    
+                                                    <option value="334">Sreemaheshwaran Muthuvel</option>    
+                                                    <option value="335">Vatan Singh</option>    
+                                                    <option value="341">Rakesh Kumar Sharma</option>    
+                                                    <option value="1711">Prem Kumar Pathak </option>    
+                                                    <option value="2278">Ankur Sachan</option>    
+                                                    <option value="2556">Ashish Kapila</option>    
+                                                    <option value="7108">Adityanarayanan Parameswaran Iyer</option>    
+                                                    <option value="7121">Abhijeet</option>    
+                                                    <option value="7595">Seema</option>    
+                                                    <option value="8080">Shiwani Laller</option>    
+                                                    <option value="8796">Pratibha Singh</option>    
+                                                    <option value="9048">Manish Kumar </option>    
+                                                    <option value="18623">Rahul Yadav</option>
+		                                         </select>
+		                                         <input class="reviewer" type="hidden" id="reviewer"  value="">
+                                            </div>
+                                                      <label class="col-lg-2 col-form-label" for="val-skill">  Department  <span class="text-danger">*</span>
+                                            </label>
+                                      <div class="col-lg-4">
+                                                <select class="form-control" required="" id="department.departmentId" name="departmentfield" aria-required="true">
+                                                   <option value="">--Select Department--</option>
+                                                    {% for department in departments %}
+                                                   <option value="{{department.id}}">{{department.depName}}</option>
+                                                    {% endfor %}
+                                                  </select>
+                                            </div>
+                                        </div>
+                                         <div class="form-group row">
+                                                          <label class="col-lg-2 col-form-label" for="val-currency">Location  <span class="text-danger">*</span>
+                                            </label>
+                                           <div class="col-lg-4">
+                                                <select class="form-control" required="" id="location" name="location" aria-required="true">
+                                                   <option value="">--Select Location--</option>
+												    <option value="Bangaluru">Bangaluru</option>
+												    <option value="Noida">Noida</option>
+                                                </select>
+                                            </div>
+                                                        <!-- <label class="col-lg-2 col-form-label" for="val-range">    Business Allocation* <span class="text-danger">*</span>
+                                            </label> -->
+                                               <!-- <div class="col-lg-4">
+                                                <select class="form-control" >
+                                                   <option value="0">--Select Business Alloc.--</option>
+    <option value="1">Corporate</option>
+    <option value="2">D &amp; OI</option>
+    <option value="3">GSPL</option>
+    <option value="4">S&amp;B</option>
+    <option value="5">TR</option>
+
+                                                </select> 
+                                            </div>-->
+                                        </div>
+                             
+                                        <div class="form-group row">
+                                            <label class="col-lg-2 col-form-label" for="val-website">  ICE Number  <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-4">
+                                                <input type="text" class="form-control" required="" id="emergencyContactNumber" name="emergencyContactNumber" value="" aria-required="true">
+                                            </div>
+                                                    <label class="col-lg-2 col-form-label" for="val-range">    ICE Name   <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-4">
+                                                <input type="text" class="form-control" required="" id="emergencyContactName" name="emergencyContactName" value="" aria-required="true">
+                                            </div>
+                                        </div>
+                                            <div class="form-group row">
+
+                                                         <label class="col-lg-2 col-form-label" for="val-phoneus">Qualification  <span class="text-danger">*</span>
+                                            </label>
+                                              <div class="col-lg-4">
+                                                <select class="form-control" required="" id="qualification.qualificationId" name="qualification" aria-required="true">
+                                                   <option value="">--Select Qualification--</option>
+                                                    <option value="btech">btech</option>
+                                                    <option value="MCA">MCA</option>
+
+
+                                                   </select>
+                                            </div>
+                                                           <label class="col-lg-2 col-form-label" for="val-range">   Blood Group <span class="text-danger">*</span>
+                                            </label>
+                                                 <div class="col-lg-4">
+                                                <select class="form-control" required="" id="bloodGroup" name="bloodGroup" aria-required="true">
+                                                   <option value="0">Select Blood Group</option>
+    <option value="A1 +">A1 +</option>
+    <option value="A1 -">A1 -</option>
+    <option value="A2 +">A2 +</option>
+    <option value="A2 -">A2 -</option>
+    <option value="B +">B +</option>
+    <option value="B -">B -</option>
+    <option value="A1B +">A1B +</option>
+    <option value="A1B -">A1B -</option>
+    <option value="A2B +">A2B +</option>
+    <option value="A2B -">A2B -</option>
+    <option value="AB +">AB +</option>
+    <option value="AB -">AB -</option>
+    <option value="O +">O +</option>
+    <option value="O -">O -</option>
+    <option value="A +">A +</option>
+    <option value="A -">A -</option>
+    <option value="RH +">RH +</option>
+    <option value="RH -">RH -</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                 
+                                        <div class="form-group row">
+                                            <label class="col-lg-2 col-form-label" for="val-digits">  Mobile Phone   <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-4">
+                                                <input type="text" class="form-control" required="" id="mobileNumber" name="mobileNumber" value="" aria-required="true">
+                                            </div>
+                                                    <label class="col-lg-2 col-form-label" for="val-number">Marital Status  <span class="text-danger">*</span>
+                                            </label>
+                                                   <div class="col-lg-4">
+                                                <select class="form-control" required="" id="maritalStatus" name="maritalStatus" aria-required="true">
+                                                    <option value="0">Select Marital Status</option>
+    <option value="Single">Single</option>
+    <option value="Married">Married</option>
+    <option value="Separated">Separated</option>
+    <option value="Widow / Widower">Widow / Widower</option>
+                                       
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                             <label class="col-lg-2 col-form-label" for="val-number">Branch  <span class="text-danger">*</span>
+                                            </label>
+                                                   <div class="col-lg-4">
+                                                <select class="form-control" required="" id="branch" name="branch" aria-required="true">
+                                                   <option value="">Select Stream</option>
+													<option value="Civil">Civil</option>
+													<option value="Mechanical">Mechanical</option>
+													<option value="Electrical">Electrical</option>
+													<option value="Instrumentation">Instrumentation</option>
+													<option value="Chemical">Chemical</option>
+													<option value="IT">IT</option>
+													<option value="Computer Science">Computer Science</option>
+													<option value="Electronics and Communication">Electronics and Communication</option>
+													<option value="Economics">Economics</option>
+													<option value="Commerce">Commerce</option>
+													<option value="Physics">Physics</option>
+													<option value="Chemistry">Chemistry</option>
+													<option value="Maths">Maths</option>
+													<option value="Literature">Literature</option>
+													<option value="Politics">Politics</option>
+													<option value="journalism">journalism</option>
+													<option value="Accountancy">Accountancy</option>
+													<option value="Business Administration">Business Administration</option>
+													<option value="Finance">Finance</option>
+													<option value="Marketing">Marketing</option>
+													<option value="Systems">Systems</option>
+													<option value="Project Mgmt">Project Mgmt</option>
+													<option value="HR">HR</option>
+													<option value="Other">Other</option>
+													<option value="Analysis Design">Analysis Design</option>
+													<option value="Electronics and Instrumentation">Electronics and Instrumentation</option>
+													<option value="HR and Finance">HR and Finance</option>
+													<option value="IPED">IPED</option>
+													<option value="Industrial Structures">Industrial Structures</option>
+													<option value="Instrument Technology">Instrument Technology</option>
+													<option value="Instrumentation and Control">Instrumentation and Control</option>
+													<option value="Mechanical and Automation">Mechanical and Automation</option>
+													<option value="Petrochemical">Petrochemical</option>
+													<option value="Process">Process</option>
+													<option value="Production Engineering">Production Engineering</option>
+													<option value="--Not Applicable--">--Not Applicable--</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <label class="col-lg-2 col-form-label otherBranch" for="val-digits" style="display: none;">  For Other(Pls Specify)  
+                                            </label>
+                                            <div class="col-lg-4">
+                                                <input type="text" class="form-control otherBranch" placeholder=" For Other(Pls Specify)" id="otherBranch" name="otherBranch" value="" style="display: none;">
+                                           </div>
+                                        </div>
+                                        </div>
+                                       <!-- <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label"><a href="#">Terms &amp; Conditions</a>  <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-8">
+                                                <label class="css-control css-control-primary css-checkbox" for="val-terms">
+                                                    <input type="checkbox" class="css-control-input" id="val-terms" name="val-terms" value="1"> <span class="css-control-indicator"></span> I agree to the terms</label>
+                                            </div>
+                                        </div>-->
+                                        <div class="form-group row">
+                                            <div class="col-lg-12 text-center">
+                                                <button type="submit" class="btn btn-primary valid-sub">Submit</button>
+                                                 <!-- <button type="submit" class="btn btn-primary valid-sub">Refresh</button> -->
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        <!--**********************************
+            Footer start
+        ***********************************-->
+<!--         <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
+            </div>
+        </div> -->
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+ 
+    <script src="{% static 'plugins/common/common.min.js' %}"></script>
+    <script src="{% static 'js/custom.min.js' %}"></script>
+    <script src="{% static 'js/settings.js.download' %}"></script>
+    <script src="{% static 'js/gleek.js.download' %}"></script>
+    <script src="{% static 'js/styleSwitcher.js.download' %}"></script>
+
+    <script src="{% static 'plugins/jquery.validate.min.js.download' %}"></script>
+    <script src="{% static 'plugins/jquery.validate-init.js.download' %}"></script>
+
+</body></html>

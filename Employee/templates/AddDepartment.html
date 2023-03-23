@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+{% load static %}
+<!-- saved from url=(0037)http://14.142.34.210:8080/addemployee -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" xmlns:th="http://www.thymeleaf.org">
+
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Intranet</title>
+       <!-- Favicon icon -->
+      <link rel="icon" type="../image/png" sizes="16x16" href="http://14.142.34.210:8080/images/favicon.png">
+           <!-- Custom Stylesheet -->
+      <link href="{% static 'css/style.css' %}" rel="stylesheet">
+      <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+      <script type="text/javascript" src="{% static 'plugins/jquery.min.js.download"></script>
+   </head>
+   <body data-theme-version="light" data-layout="vertical" data-nav-headerbg="color_1" data-headerbg="color_1" data-sidebar-style="full" data-sibebarbg="color_1" data-sidebar-position="static" data-header-position="static" data-container="wide" direction="ltr" data-gr-c-s-loaded="true">
+      <!--*******************
+         Preloader start
+         ********************-->
+      <div id="preloader" style="display: none;">
+         <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+               <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"></circle>
+            </svg>
+         </div>
+      </div>
+      <!--*******************
+         Preloader end
+         ********************-->
+      <!--**********************************
+         Main wrapper start
+         ***********************************-->
+      <div id="main-wrapper" class="show">
+         <!--**********************************
+            Nav header start
+            ***********************************-->
+         <div class="nav-header">
+            <div class="brand-logo">
+               <a href="http://14.142.34.210:8080/index.html">
+               <b class="logo-abbr"><img src="{% static 'images/logo.png' %}" alt=""> </b>
+               <span class="logo-compact"><img src="{% static 'images/logo-compact.png' %}" alt=""></span>
+               <span class="brand-title">
+               <img src="{% static 'images/logo-text.png' %}" alt="" style="width: 100%;margin-top: -17px;">
+               </span>
+               </a>
+            </div>
+         </div>
+         <!--**********************************
+            Nav header end
+            ***********************************-->
+         <!--**********************************
+            Header start
+            ***********************************-->
+      		<header>        <div class="header">
+            <div class="header-content clearfix">
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="toggle-icon"><i class="icon-menu"></i></span>
+                    </div>
+                </div>
+                <div class="header-left">
+
+                </div>
+                <div class="header-right">
+                    <ul class="clearfix">
+                        <li class="icons dropdown">
+                            <b><span></span></b>&nbsp;
+                        </li>
+                        <li class="icons dropdown">
+                            <a href="http://14.142.34.210:8080/employeesextension">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="icons dropdown">
+                            <div class="user-img c-pointer position-relative" data-toggle="dropdown" aria-expanded="false">
+                                <span class="activity active"></span>
+                                <i class="fa fa-user-circle users-img" aria-hidden="true"></i>
+                            </div>
+                            <div class="drop-down dropdown-profile dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-132px, 57px, 0px);">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="http://14.142.34.210:8080/requestchangepassword"><i class="icon-lock"></i> <span>Reset Password</span></a>
+                                        </li>
+                                        <li><a href="/employeeLogin"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+</header>
+         <!--**********************************
+            Header end ti-comment-alt
+            ***********************************-->
+         <!--**********************************
+            Sidebar start
+            ***********************************-->
+            <header>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+   <!--**********************************
+            Sidebar start
+            ***********************************-->
+         <div class="nk-sidebar">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;"><div class="nk-nav-scroll active" style="overflow: hidden; width: auto; height: 100%;">
+               <ul class="metismenu in" id="menu">
+                  <li>
+                     <a href="http://14.142.34.210:8080/home" aria-expanded="false">
+                     <i class="icon-speedometer menu-icon"></i><span class="nav-text">Home</span>
+                     </a>
+                  </li>
+                  <!--<li>
+                     <a  href="table-datatable.html" aria-expanded="false">
+                     <i class="icon-speedometer menu-icon"></i><span class="nav-text">listening Page </span>
+                     </a>
+                  </li>
+                  <li>
+                     <a  href="form-validation.html" aria-expanded="false">
+                     <i class="icon-speedometer menu-icon"></i><span class="nav-text">Add New  </span>
+                     </a>
+                  </li>-->
+                  <li class="mega-menu mega-menu-sm active">
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-globe-alt menu-icon"></i><span class="nav-text">HR</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse in">
+                        <li class="active"><a href="http://14.142.34.210:8080/addemployee" class="active">Add Employee Details</a></li>
+                        <li><a href="http://14.142.34.210:8080/listemployee">Employee List</a></li>
+                        <li><a href="http://14.142.34.210:8080/listdepartment">Department Master</a></li>
+                        <li><a href="http://14.142.34.210:8080/listdesignation">Designation Master</a></li>
+                        <li><a href="http://14.142.34.210:8080/listqualification">Qualification Master</a></li>
+                        <li><a href="http://14.142.34.210:8080/updateLeavesRequest">Leave Master</a></li>
+                        <li><a href="http://14.142.34.210:8080/leaveContributionRequest">Leave Contribution</a></li>
+                        <li><a href="http://14.142.34.210:8080/attendanceShortageReportDates">Attendance Shortage Report</a></li>
+                        <li><a href="http://14.142.34.210:8080/getDetailLeaveReportDates">Detail Leave Report</a></li>
+                        <li><a href="http://14.142.34.210:8080/getHolidays">Update Holidays</a></li>
+                        <li><a href="http://14.142.34.210:8080/editNews">Add NEWS</a></li>
+                        <li><a href="http://14.142.34.210:8080/getAttendance">Update Employee Attendance</a></li>
+                        <li><a href="http://14.142.34.210:8080/listEmployeesForReport">Flexible Report</a></li>
+                        <li><a href="http://14.142.34.210:8080/employeesAdditionDeletionDates">Addition Deletion Report</a></li>
+                        <li><a href="http://14.142.34.210:8080/leaveTrackReportDates">Leave Track Report</a></li>
+                        <li><a href="http://14.142.34.210:8080/uploadDocument">Upload Documents</a></li>
+                        <li><a href="http://14.142.34.210:8080/getEmployeesForEmployeeOfTheMonth">Choose Employee of Month</a></li>
+                        <li><a href="http://14.142.34.210:8080/manHourReportDates">ManHour Report</a></li>
+                        <!-- <li><a href="#">Leave Master</a></li>
+                        <li><a href="../hr/compensatory-off.html">Compensatory Off</a></li>
+                        <li><a href="../hr/reset-password.html">Reset Password</a></li>
+                        <li><a href="../hr/traniee-to-permanent.html">Traniee To Permanent</a></li> -->
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-envelope menu-icon"></i> <span class="nav-text">My Account</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+                        <li><a href="http://14.142.34.210:8080/filltimesheet">Fill Time Sheet</a></li>
+                        <li><a href="http://14.142.34.210:8080/viewtimesheet">View Time Sheet</a></li>
+                        <li>
+                       		<a href="http://14.142.34.210:8080/employeeManHourReportDates">Man-Hour Report</a>
+                       	</li>
+                        <li>
+                       		<a href="http://14.142.34.210:8080/getEmployeeAttendanceReportDates">My Timesheet and Attendance</a>
+                       	</li>
+                        <li>
+                       		<a href="http://14.142.34.210:8080/getEmployeeAttendanceReport">My Attendance</a>
+                       	</li>
+                       	<li><a href="http://14.142.34.210:8080/leaveContribution">Leave Contribution</a></li>
+                       	<li><a href="http://14.142.34.210:8080/leaveEncashmentRequest">Leave Encashment Request</a></li>
+                       	<li><a href="http://14.142.34.210:8080/viewLeaveEncashmentRequest">Leave Encashment Status</a></li>
+                       	<li>
+                       		<a href="http://14.142.34.210:8080/requesttimesheetlistforapproval">Approve Time Sheet</a>
+                       	</li>
+                       	<li>
+                       		<a href="http://14.142.34.210:8080/getemployeelistforassigninglead">Assign Reviewer</a>
+                       	</li>
+                        <li>
+                       		<a href="http://14.142.34.210:8080/requestTimeSheetFinalReport">SnB Timesheet Report</a>
+                       	</li>
+                        <li>
+                       		<a href="http://14.142.34.210:8080/requestTimeSheetStatusReport">Timesheet Status Report</a>
+                       	</li>
+                       	<li>
+                       		<a href="http://14.142.34.210:8080/getCumulativeLeaveReport">Cumulative Leave Report</a>
+                       	</li>
+                       	<li>
+                       		<a href="http://14.142.34.210:8080/leaveEncashmentRequestListDatesForHr">Leave Encashment Request List</a>
+                       	</li>
+
+                        <!-- <li><a href="#">Attendence</a></li> -->
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">HR FORM &amp; Documents</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+                        <li><a href="http://14.142.34.210:8080/uploaded/documents/mediclaimReimbursementClaimForm.pdf">Mediclaim Form</a></li>
+                        <li><a href="http://14.142.34.210:8080/uploaded/documents/standardTerms.pdf">Standard Mediclaim Terms</a></li>
+                        <li><a href="http://14.142.34.210:8080/uploaded/documents/additionalTerms.pdf">Additional Mediclaim Terms</a></li>
+                        <li><a href="http://14.142.34.210:8080/uploaded/documents/holidayListBangalore.pdf">Holiday List Bengaluru</a></li>
+                        <li><a href="http://14.142.34.210:8080/uploaded/documents/holidayListNoida.pdf">Holiday List Noida</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-graph menu-icon"></i> <span class="nav-text">Leave</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+                        <li><a href="http://14.142.34.210:8080/leaveRequest">Leave Application</a></li>
+                        <li><a href="http://14.142.34.210:8080/leaveStatus">Leave Request</a></li>
+                        <li><a href="http://14.142.34.210:8080/leaveListForApproval">Leave Approval</a></li>
+
+                        <!-- <li><a href="#">Leave Request Status</a></li>
+                        <li><a href="#">Leave Encashment Form</a></li>
+                        <li><a href="#">Leave Encashment Status/Approval</a></li>
+                        <li><a href="#">Leave Encashment Report</a></li>
+                        <li><a href="#">Leave Contribution</a></li>
+                        <li><a href="#">Leave Contribution Admin</a></li>
+                        <li><a href="#">Leave Contribution Report</a></li>
+                        <li><a href="#">Holiday List</a></li> -->
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-grid menu-icon"></i><span class="nav-text">Travel</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+                        <!-- <li><a href="#">Domestic Travel Request Form</a></li>
+                        <li><a href="#">Foreign Travel Request Form</a></li>
+                        <li><a href="#">Travel Request Status</a></li> -->
+                        <!-- </ul>
+                           </li>
+                           <li>
+                               <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                                   <i class="icon-layers menu-icon"></i><span class="nav-text">Components</span>
+                               </a>
+                               <ul aria-expanded="false"> -->
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-note menu-icon"></i><span class="nav-text">HelpDesk</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+
+                        <!-- <li><a href="#">Conference Room Booking Form</a></li>
+                        <li><a href="#">Admin Purchase Request Form</a></li>
+                        <li><a href="#">Admin Purchase Status/Approval</a></li>
+                        <li><a href="#">Login/Email/HW/SW Requests Status</a></li>
+                        <li><a href="#">Media Request And Data Copy Form</a></li>
+                        <li><a href="#">Virus Check And Data Transfer Form</a></li>
+                        <li><a href="#">Media And Data Transfer Status</a></li>
+                        <li><a href="#">Media And Data Transfer Status</a></li> -->
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-menu menu-icon"></i><span class="nav-text">Mediclaim</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+                        <li><a href="http://14.142.34.210:8080/startMediclaim">Start Mediclaim Process</a></li>
+                        <li><a href="http://14.142.34.210:8080/getEmployeeListForMediclaim">Mediclaim List</a></li>
+                        <li><a href="http://14.142.34.210:8080/getEmployeeMediclaimListForHR">Edit Employee Nomination</a></li>
+
+                        <li><a href="http://14.142.34.210:8080/getEmployeeMediclaimForView">View Mediclaim</a></li>
+                        <li><a href="http://14.142.34.210:8080/getEmployeeMediclaim">Nomination</a></li>
+                        <li><a href="http://14.142.34.210:8080/getEmployeeMediclaimForDeclaration">Declaration</a></li>
+                        <li><a href="http://14.142.34.210:8080/addemployee#">Quality Document</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-menu menu-icon"></i><span class="nav-text">Quality</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+<!--                         <li><a href="#">Quality Policy</a></li>
+                        <li><a href="#">HSE Policy</a></li>
+                        <li><a href="#">Quality Document</a></li> -->
+                     </ul>
+                  </li>
+                  <!-- <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-notebook menu-icon"></i><span class="nav-text">Lesson</span>
+                     </a>
+                     <ul aria-expanded="false">
+                        <li><a href="#">Lesson Learnt Entry</a></li>
+                        <li><a href="#">Lesson Learnt Status</a></li>
+                        <li><a href="#">Lesson Learnt Report</a></li>
+                     </ul>
+                  </li> -->
+                  <!-- <li>
+                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                     <i class="icon-notebook menu-icon"></i><span class="nav-text">Reprography</span>
+                     </a>
+                     <ul aria-expanded="false">
+                        <li><a href="#">Reprography Request</a></li>
+                        <li><a href="#">Reprography Status</a></li>
+                     </ul>
+                  </li> -->
+
+                  <li>
+                     <a class="has-arrow" href="javascript:appraisal()" aria-expanded="false">
+                     <i class="icon-note menu-icon"></i><span class="nav-text">Appraisal</span>
+                     </a>
+                     <ul aria-expanded="false" class="collapse">
+                     	<li><a href="http://14.142.34.210:8080/startAppraisal">Start Appraisal</a></li>
+                     	<li><a href="http://14.142.34.210:8080/getApprisalListForHr">Report</a></li>
+                     	<li><a href="http://14.142.34.210:8080/getemployeelistforAssigningAppraiser">Assign Appraiser</a></li>
+                     	<li><a href="http://14.142.34.210:8080/getEmployeeAppraisal">Employee Appraisal</a></li>
+                     	<li><a href="http://14.142.34.210:8080/getEmployeelistforAppraiser">Appraiser Appraisal</a></li>
+                     	<li><a href="http://14.142.34.210:8080/getEmployeeListForHod">HOD Appraisal</a></li>
+
+                        <!-- <li><a href="#">IT Support Request Form</a></li>
+                        <li th:if="${session.user.userRole} == 'Admin'"><a href="../getLeaveRequestList">Leave Revert</a></li>
+                        <li><a href="#">IT Support Request Status</a></li>
+                        <li><a href="#">Conference Room Booking Form</a></li>
+                        <li><a href="#">Admin Purchase Request Form</a></li>
+                        <li><a href="#">Admin Purchase Status/Approval</a></li>
+                        <li><a href="#">Login/Email/HW/SW Requests Status</a></li>
+                        <li><a href="#">Media Request And Data Copy Form</a></li>
+                        <li><a href="#">Virus Check And Data Transfer Form</a></li>
+                        <li><a href="#">Media And Data Transfer Status</a></li>
+                        <li><a href="#">Media And Data Transfer Status</a></li> -->
+                     </ul>
+                  </li>
+               </ul>
+            </div><div class="slimScrollBar" style="background: transparent; width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 1213.32px;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+         </div>
+        <!--**********************************
+            Sidebar end
+            ***********************************-->
+</header>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body" style="min-height: 788px;">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Add Department</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2>Add Department Details</h2>
+                                <div class="form-validation">
+                                    <form class="form-valide" action="{% url 'department' %}" method="post" novalidate="novalidate">
+                                        {% csrf_token %}
+                                    <div class="lk" style="margin-bottom: 20px;">
+
+                                        <div class="form-group row">
+                       <label class="col-lg-2 col-form-label">Department Name</label>
+                           <div class="col-sm-4">
+                              <input type="text" required="" class="form-control" id="departmentName" name="depName" placeholder="Name"  value="" aria-required="true">
+                           </div>
+                           <input  id="departmentId" type="hidden">
+                           <label class="col-lg-2 col-form-label">HOD</label>
+                           <div class="col-sm-4">
+                              <select class="form-control departmentHead" required="" id="" name="hod" aria-required="true">
+                                <option value="">Select</option>
+                                    <option value="ABCD">ABCD</option>
+						            <option value="PQRS">PQRS</option>
+                              </select>
+                           </div>
+                        </div>
+                                       <div class="form-group row">
+                           <label class="col-lg-2 col-form-label">Type</label>
+                           <div class="col-sm-4">
+                              <select class="form-control" required="" id="departmentType" name="departmentType" aria-required="true">
+                                    <option value="">Select</option>
+                                    <option value="Y">Billable</option>
+						            <option value="N">Non-Billable</option>
+                              </select>
+                           </div>
+                                 <label class="col-lg-2 col-form-label">MIS Cats</label>
+                           <div class="col-sm-4">
+                       
+                              <select class="form-control" required="" id="misCategory" name="misCategory" aria-required="true">
+                              		<option value="">Select</option>
+                                    <option value="Engineering">Engineering</option>
+						            <option value="Office Management">Office Management</option>
+						            <option value="Operations">Operations</option>
+						            <option value="Supporting Departments">Supporting Departments</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="form-group row ">
+                        	<label class="col-lg-2 col-form-label">Department Code</label>
+                           <div class="col-sm-4">
+                           	<input type="text" required="" class="form-control" id="departmentCode" name="departmentCode" value="" aria-required="true">
+                           </div>
+                           <label class="col-lg-2 col-form-label status">Status</label>
+                           <div class="col-sm-4 status">
+                           <label class="switch">
+                                            <input type="checkbox" id="status" value="1" name="status">
+                                            <span class="slider round"></span>
+                               </label>
+                           </div>
+                        </div>
+                     
+                                        </div>
+                                       <!-- <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label"><a href="#">Terms &amp; Conditions</a>  <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-8">
+                                                <label class="css-control css-control-primary css-checkbox" for="val-terms">
+                                                    <input type="checkbox" class="css-control-input" id="val-terms" name="val-terms" value="1"> <span class="css-control-indicator"></span> I agree to the terms</label>
+                                            </div>
+                                        </div>-->
+                                        <div class="form-group row">
+                                            <div class="col-lg-12 text-center">
+                                                <button type="submit" class="btn btn-primary valid-sub">Submit</button>
+                                                 <!-- <button type="submit" class="btn btn-primary valid-sub">Refresh</button> -->
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        <!--**********************************
+            Footer start
+        ***********************************-->
+<!--         <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
+            </div>
+        </div> -->
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+ 
+    <script src="{% static 'plugins/common/common.min.js' %}"></script>
+    <script src="{% static 'js/custom.min.js' %}"></script>
+    <script src="{% static 'js/settings.js.download' %}"></script>
+    <script src="{% static 'js/gleek.js.download' %}"></script>
+    <script src="{% static 'js/styleSwitcher.js.download' %}"></script>
+
+    <script src="{% static 'plugins/jquery.validate.min.js.download' %}"></script>
+    <script src="{% static 'plugins/jquery.validate-init.js.download' %}"></script>
+
+</body></html>
