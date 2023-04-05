@@ -52,6 +52,50 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Employee.urls'
 
+LOGGING = {
+    'version':1,
+    'disable_existing_loggers':True,
+    
+    # Define the formatters to be used
+    'formatters': {
+        # Define a formatter with a specific format
+        'main_formatter':{
+            'format': "{asctime} - {levelname} - {module} - {message}",
+            "style": "{",    
+        },
+    },
+    
+    # Define the handlers to be used
+    'handlers': {
+        # Define a handler to output log messages to the console
+        'console': {
+            'class': "logging.StreamHandler",
+            'formatter': 'main_formatter',
+        },
+        # Define a handler to output log messages to a file
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'info.log',
+            'formatter': 'main_formatter',
+        },
+    },
+    
+    # Define the loggers to be used
+    'loggers': {
+        # Define the logger named 'main'
+        'main': {
+            # Define the handlers to be used for the logger
+            'handlers': ['file','console'],
+            # Allow messages to propagate to parent loggers
+            'propagate':True,
+            # Set the log level for the logger
+            'level': "INFO",
+        },
+    },
+}
+
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

@@ -3,20 +3,34 @@ from django.shortcuts import render
 
 # Create your views here.
 from .models import Department_tbl, Employee_tbl
+import logging
+ 
+logger=logging.getLogger('main')
 
 
 def Department(request):
-    if request.method=="POST":
-        depName=request.POST.get('depName')
-        hod=request.POST.get('hod')
-        departmentType=request.POST.get('departmentType')
-        misCategory=request.POST.get('misCategory')
-        departmentCode=request.POST.get('departmentCode')
-        status=request.POST.get('status')
-        dep=Department_tbl(depName=depName,hod=hod,departmentType=departmentType,misCategory=misCategory,departmentCode=departmentCode,status=status)
-        dep.save()
+    try:
+        logger.info("Department function is working")
+        if request.method=="POST":
+            depName=request.POST.get('depName')
+            logger.info(depName)
+            hod=request.POST.get('hod')
+            logger.info(hod)
+            departmentType=request.POST.get('departmentType')
+            logger.info(departmentType)
+            misCategory=request.POST.get('misCategory')
+            logger.info(misCategory)
+            departmentCode=request.POST.get('departmentCode')
+            logger.info(departmentCode)
+            status=request.POST.get('status')
+            logger.info(status)
+            dep=Department_tbl(depName=depName,hod=hod,departmentType=departmentType,misCategory=misCategory,departmentCode=departmentCode,status=status)
+            dep.save()
+    except Exception as e:
+        logger.error("An error occurred while processing Department function")
 
     return render(request,'AddDepartment.html')
+
 
 
 def Employee(request):

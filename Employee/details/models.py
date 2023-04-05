@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 
 
-
 class Department_tbl(models.Model):
     depName= models.CharField(max_length=50,unique=True)
     hod=models.CharField(max_length=50)
@@ -14,19 +13,15 @@ class Department_tbl(models.Model):
     created_date=models.DateField(auto_now_add=True)
 
 
-
 class Employee_tbl(models.Model):
+    department = models.ForeignKey(Department_tbl, on_delete=models.CASCADE)
     accountType=models.CharField(max_length=50)
     employeeType=models.CharField(max_length=50)
     softNumber=models.CharField(max_length=50)
     payrollNumber=models.CharField(max_length=50)
     employeeName=models.CharField(max_length=50)
     gender=models.CharField(max_length=50)
-
-
     joiningDate=models.DateField()
-
-
     emailId=models.CharField(max_length=50,unique=True)
     dob=models.DateField()
     renewalType=models.CharField(max_length=50)
@@ -35,7 +30,10 @@ class Employee_tbl(models.Model):
     nonSbecExpTime=models.IntegerField()
     presbecExpTime=models.IntegerField()
     approver=models.CharField(max_length=50)
-    department=models.ForeignKey(Department_tbl,on_delete=models.CASCADE)
+
+
+
+
     location=models.CharField(max_length=50)
     emergencyContactNumber=models.CharField(max_length=50)
     qualification=models.CharField(max_length=50)
